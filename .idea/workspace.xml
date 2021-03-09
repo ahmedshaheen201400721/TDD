@@ -10,7 +10,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b7618e1-cd85-4885-9fb6-ab9f059ab210" name="Default Changelist" comment="" />
+    <list default="true" id="9b7618e1-cd85-4885-9fb6-ab9f059ab210" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/forum.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/forum.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -133,6 +142,7 @@
       <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
       <path value="$PROJECT_DIR$/vendor/laravel/breeze" />
       <path value="$PROJECT_DIR$/vendor/bumbummen99/shoppingcart" />
+      <path value="$PROJECT_DIR$/vendor/ottaviano/faker-gravatar" />
     </include_path>
   </component>
   <component name="ProjectId" id="1o3bPNK7EZxCf3uJzwK7MKf9n6P" />
@@ -174,6 +184,7 @@
       <updated>1612518195750</updated>
       <workItem from="1612518198091" duration="37986000" />
       <workItem from="1615303542164" duration="211000" />
+      <workItem from="1615303768075" duration="717000" />
     </task>
     <servers />
   </component>
@@ -201,6 +212,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="475" y="76" width="406" height="641" key="#com.intellij.ide.util.MemberChooser/0.27.1366.741@0.27.1366.741" timestamp="1612541227706" />
+    <state x="416" y="155" width="524" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1615304200112">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="416" y="155" width="524" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1366.741@0.27.1366.741" timestamp="1615304200112" />
     <state x="466" y="155" width="424" height="483" key="FileChooserDialogImpl" timestamp="1615303762401">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -225,10 +240,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="347" y="176" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1612612270041" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1612627607099">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1615304466910">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1612627607099" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1615304466910" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
