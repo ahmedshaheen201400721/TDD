@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('threads',[\App\Http\Controllers\ThreadController::class,'index'])->name('threads.index');
+Route::get('threads/{thread:slug}',[\App\Http\Controllers\ThreadController::class,'show'])->name('threads.show');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';

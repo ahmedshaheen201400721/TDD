@@ -11,14 +11,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b7618e1-cd85-4885-9fb6-ab9f059ab210" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/forum.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/forum.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/threads/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/threads/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ThreadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ThreadController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Reply.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Reply.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Thread.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Thread.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ReplyFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ReplyFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_09_153149_create_threads_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_09_153149_create_threads_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_09_153159_create_replies_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_09_153159_create_replies_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,6 +171,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
@@ -184,7 +203,10 @@
       <updated>1612518195750</updated>
       <workItem from="1612518198091" duration="37986000" />
       <workItem from="1615303542164" duration="211000" />
-      <workItem from="1615303768075" duration="717000" />
+      <workItem from="1615303768075" duration="4371000" />
+      <workItem from="1615324141949" duration="5351000" />
+      <workItem from="1615385043443" duration="13000" />
+      <workItem from="1615386806682" duration="2751000" />
     </task>
     <servers />
   </component>
@@ -224,10 +246,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="346" y="113" width="663" height="567" key="NewPhpClassDialog/0.27.1366.741@0.27.1366.741" timestamp="1612614362378" />
-    <state x="479" y="322" width="337" height="150" key="NewPhpFileDialog" timestamp="1612624186764">
+    <state x="479" y="322" width="327" height="150" key="NewPhpFileDialog" timestamp="1615388905021">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="479" y="322" width="337" height="150" key="NewPhpFileDialog/0.27.1366.741@0.27.1366.741" timestamp="1612624186764" />
+    <state x="479" y="322" width="327" height="150" key="NewPhpFileDialog/0.27.1366.741@0.27.1366.741" timestamp="1615388905021" />
     <state x="172" y="32" key="SettingsEditor" timestamp="1612541211481">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -236,14 +258,18 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="458" y="311" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1366.741@0.27.1366.741" timestamp="1612519758574" />
-    <state x="347" y="176" key="run.anything.popup" timestamp="1612612270041">
+    <state x="347" y="176" key="run.anything.popup" timestamp="1615387134566">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="347" y="176" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1612612270041" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1615304466910">
+    <state x="347" y="176" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1615387134566" />
+    <state x="456" y="205" key="save.file.as.template.dialog" timestamp="1615304687562">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1615304466910" />
+    <state x="456" y="205" key="save.file.as.template.dialog/0.27.1366.741@0.27.1366.741" timestamp="1615304687562" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1615388714663">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1615388714663" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
