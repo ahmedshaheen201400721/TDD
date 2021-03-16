@@ -9,13 +9,16 @@ class Reply extends Model
 {
     use HasFactory;
     protected $guarded=[];
+    protected $with=['owner'];
 
-    public function user(){
-        return $this->belongsTo(User::class);
+    public function owner(){
+        return $this->belongsTo(User::class,'user_id');
     }
 
     public function thread(){
         return $this->belongsTo(Thread::class);
     }
+
+
 
 }

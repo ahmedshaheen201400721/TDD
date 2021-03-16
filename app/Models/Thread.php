@@ -10,8 +10,29 @@ class Thread extends Model
 {
     use HasFactory;
     protected $guarded=[];
+    protected $with = ['replies','author'];
+
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function replies(){
         return $this->hasMany(Reply::class);
+    }
+
+    public function addReply()
+    {
+        $this->replies()->create(['body'=>request('body'),'user_id'=>auth()->id()]);
+    }
+
+    public function author()
+    {
+        return $this->belongsTo(User::class,'user_id');
+    }
+
+
+    public function path(){
+        return '/threads/'.$this->slug;
     }
 
     // create slug for any thread

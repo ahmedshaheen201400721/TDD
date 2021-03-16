@@ -12,7 +12,7 @@
                     <div class="p-6 bg-white flex justify-between ">
                         <div>
                             <div class="p-2 font-bold border-b border-gray-200">
-                                <a href="{{route('threads.show',['thread'=>$thread->slug])}}">{{ $thread->title}}</a>
+                                <a href="{{$thread->path()}}">{{ $thread->title}}</a>
                             </div>
                         </div>
                         <div>

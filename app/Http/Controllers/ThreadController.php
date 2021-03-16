@@ -14,8 +14,8 @@ class ThreadController extends Controller
      */
     public function index()
     {
-        $threads=Thread::inRandomOrder()->get();
-        return view('threads.index')->with(['threads'=>$threads]);
+        $threads=Thread::inRandomOrder()->select(['title','body','created_at','slug'])->get();
+        return view('threads.index',['threads'=>$threads]);
     }
 
     /**
@@ -47,7 +47,10 @@ class ThreadController extends Controller
      */
     public function show(Thread $thread)
     {
-        return view('threads.show',compact('thread'));
+//        dd($thread);
+
+//        $replies=$thread->replies;
+        return view('threads.show',['thread'=>$thread]);
     }
 
     /**

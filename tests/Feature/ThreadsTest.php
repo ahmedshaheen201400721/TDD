@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Models\Reply;
 use App\Models\Thread;
 use Database\Factories\ThreadFactory;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -32,7 +33,14 @@ class ThreadsTest extends TestCase
     }
 
     public function test_user_can_view_single_thread(){
-        $response=$this->get('/threads/'.$this->thread->slug);
+        $response=$this->get($this->thread->path());
         $response->assertSee($this->thread->title);
+    }
+
+    public function test_user_can_see_replies_when_viewing_single_thread()
+    {
+        $reply=Reply::factory()->create(['thread_id'=>$this->thread->id]);
+        $response=$this->get($this->thread->path());
+        $response->assertSee($reply->body);
     }
 }

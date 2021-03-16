@@ -8,7 +8,13 @@
 
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <div class="text-4xl font-bold mb-2">
+                    Thread
+                </div>
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                    <div>
+                        author: <strong>{{$thread->author->name}}</strong>
+                    </div>
                     <div class="p-6 bg-white flex justify-between ">
                         <div>
                             <div class="p-2 font-bold border-b border-gray-200">{{ $thread->title}}</div>
@@ -23,6 +29,30 @@
                     </div>
                 </div>
             </div>
+        </div>
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="text-4xl pb-4">Replies</div>
+
+            @forelse($thread->replies as $reply)
+                <div class="py-2">
+                    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                            <div class="p-6 bg-white flex justify-between ">
+                                <div>
+                                    <div> <strong>{{$reply->owner->name}}</strong>said that</div>
+                                    <div class="p-2 font-bold border-b border-gray-200">{{ $reply->body}}</div>
+                                </div>
+                                <div>
+                                    {{$reply->created_at->diffForHumans()}}
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            @empty
+                no replies
+            @endforelse
         </div>
 
 </x-app-layout>
