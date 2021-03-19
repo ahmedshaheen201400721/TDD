@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Reply;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,6 +14,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+         $threads=\App\Models\Thread::factory(40)->create();
+         $threads->each(fn($thread)=>Reply::factory()->count(4)->create(['thread_id'=>$thread->id,'user_id'=>$thread->user->id]));
+
     }
 }

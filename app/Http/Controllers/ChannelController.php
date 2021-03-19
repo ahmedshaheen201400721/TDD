@@ -2,20 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Reply;
-use App\Models\Thread;
+use App\Models\Channel;
 use Illuminate\Http\Request;
 
-class ReplyController extends Controller
+class ChannelController extends Controller
 {
-    /**
-     * ReplyController constructor.
-     */
-    public function __construct()
-    {
-        $this->middleware('auth')->only('store');
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -33,30 +24,27 @@ class ReplyController extends Controller
      */
     public function create()
     {
-
+        //
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
-     * @param Thread $thread
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Thread $thread)
+    public function store(Request $request)
     {
-//        dd(\request('body'));
-        $thread->addReply();
-        return redirect($thread->path(),201);
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Reply  $reply
+     * @param  \App\Models\Channel  $channel
      * @return \Illuminate\Http\Response
      */
-    public function show(Reply $reply)
+    public function show(Channel $channel)
     {
         //
     }
@@ -64,10 +52,10 @@ class ReplyController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Reply  $reply
+     * @param  \App\Models\Channel  $channel
      * @return \Illuminate\Http\Response
      */
-    public function edit(Reply $reply)
+    public function edit(Channel $channel)
     {
         //
     }
@@ -76,10 +64,10 @@ class ReplyController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Reply  $reply
+     * @param  \App\Models\Channel  $channel
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Reply $reply)
+    public function update(Request $request, Channel $channel)
     {
         //
     }
@@ -87,10 +75,10 @@ class ReplyController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Reply  $reply
+     * @param  \App\Models\Channel  $channel
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Reply $reply)
+    public function destroy(Channel $channel)
     {
         //
     }

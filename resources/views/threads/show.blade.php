@@ -7,6 +7,7 @@
     </x-slot>
 
         <div class="py-12">
+
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="text-4xl font-bold mb-2">
                     Thread
@@ -28,8 +29,24 @@
                         {{ $thread->body}}
                     </div>
                 </div>
+                @auth
+                    <div class="my-4">
+                        <div class="text-3xl text-gray-700 ">Add Reply</div>
+                        <form action="{{route('replies.store',$thread)}}" method="post">
+                            @csrf
+                            <textarea name="body" id="" class="w-full" rows=7></textarea>
+                            <input type="submit" value="add Comment" class="px-6 py-3 bg-blue-500 text-white font-bold rounded-lg">
+                        </form>
+                    </div>
+                @else
+                    <div class="my-4">
+                        <div class="text-3xl text-gray-700 ">please <a href="{{route('login')}}" class="text-blue-500 underline">sing in</a> to participate</div>
+                    </div>
+                @endauth
             </div>
         </div>
+
+
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="text-4xl pb-4">Replies</div>
 

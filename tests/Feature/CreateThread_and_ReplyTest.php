@@ -11,12 +11,12 @@ use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 use Tests\TestCase;
 
-class CreateThreadTest extends TestCase
+class CreateThread_and_ReplyTest extends TestCase
 {
     use RefreshDatabase;
 
     /**
-     * A basic feature test example.
+     * A basic feature test example.]df
      *
      * @return void
      */
@@ -48,4 +48,31 @@ class CreateThreadTest extends TestCase
         // assert true
         $response->assertRedirect('/login');
     }
+
+    public function test_authenticated_user_can_make_thread()
+    {
+//     Arrange we have authenticated user and thread date
+       $user= User::factory()->create();
+       $threadData=Thread::factory()->raw();
+
+//      Act auth user submit thread data
+        $res=$this->actingAs($user)->post('/threads',$threadData);
+
+//      Assert seeing title.body when visiting path of this thread
+        $res->assertRedirect(route('threads.index'));
+        $this->get('threads')->assertSee($threadData['title'])->assertSee($threadData['body']);
+    }
+    public function test_guest_user_cannot_make_thread()
+    {
+//     Arrange we have guest user and thread date
+        $threadData=Thread::factory()->raw();
+
+//      Act guest submit thread data
+        $res=$this->post('/threads',$threadData);
+
+//      Assert redirect login
+        $res->assertRedirect(route('login'));
+    }
 }
+
+

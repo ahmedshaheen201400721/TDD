@@ -7,12 +7,12 @@ use Tests\TestCase;
 
 class ExampleTest extends TestCase
 {
+    use RefreshDatabase;
+
     /**
-     * A basic test example.
-     *
-     * @return void
+     * @test
      */
-    public function testBasicTest()
+    public function it_()
     {
         $response = $this->get('/');
 
