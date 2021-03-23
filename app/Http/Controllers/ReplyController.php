@@ -43,9 +43,14 @@ class ReplyController extends Controller
      * @param Thread $thread
      * @return \Illuminate\Http\Response
      */
-    public function store(Thread $thread)
+    public function store(Request $request,Thread $thread)
     {
 //        dd(\request('body'));
+        $request->validate([
+            'body'=>'required',
+            'user_id'=>'required|Exists:users,id',
+            'thread_id'=>'required|Exists:threads,id',
+        ]);
         $thread->addReply();
         return redirect($thread->path(),201);
     }

@@ -2,14 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Channel;
 use App\Models\Thread;
+use App\support\filters\QueryFilter;
+use App\support\filters\ThreadFilter;
 use Illuminate\Http\Request;
 
 class ThreadController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->only('store');
+        $this->middleware('auth')->only(['store','create']);
     }
 
     /**
@@ -17,9 +20,16 @@ class ThreadController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(ThreadFilter $filter)
     {
-        $threads=Thread::inRandomOrder()->select(['title','body','created_at','slug'])->get();
+
+        if(array_key_exists('filter', $filter->filters()) ){
+            $threads= Thread::filter($filter)->paginate();
+
+        }else{
+        $threads=Thread::inRandomOrder()->paginate(10);
+    }
+        $threads->loadCount('replies');
         return view('threads.index',['threads'=>$threads]);
     }
 
@@ -31,6 +41,7 @@ class ThreadController extends Controller
     public function create()
     {
         //
+        return view('threads.create');
     }
 
     /**
@@ -41,22 +52,37 @@ class ThreadController extends Controller
      */
     public function store(Request $request)
     {
-        Thread::create($request->all());
-        return redirect(route('threads.index'),'302');
+        $request->validate([
+            'body'=>'required',
+            'title'=>'required',
+            'channel_id'=>'required|Exists:channels,id',
+        ]);
+        Thread::create(array_merge($request->all(),['user_id'=>auth()->id()]));
+        return redirect(route('threads.index'));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Thread  $thread
+     * @param Channel $channel
+     * @param \App\Models\Thread $thread
      * @return \Illuminate\Http\Response
      */
-    public function show(Thread $thread)
+    public function show(Channel $channel,Thread $thread)
     {
-//        dd($thread);
+
+
+        if($thread->exists){
+            $thread->load(['author','replies']);
+            return view('threads.show',['thread'=>$thread,'channel'=>$channel]);
+
+        }else{
+            $threads=$channel->threads()->withCount('replies')->paginate();
+            return view('threads.index',['threads'=>$threads,'channel'=>$channel]);
+        }
 
 //        $replies=$thread->replies;
-        return view('threads.show',['thread'=>$thread]);
+
     }
 
     /**

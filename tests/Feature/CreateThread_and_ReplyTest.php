@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Models\Channel;
 use App\Models\Reply;
 use App\Models\Thread;
 use App\Models\User;
@@ -20,41 +21,12 @@ class CreateThread_and_ReplyTest extends TestCase
      *
      * @return void
      */
-    public function test_authenticated_users_can_make_replies()
-    {
-        //arrange auth_user make reply to thread
-        $user=User::factory()->create();
-        $thread=Thread::factory()->create();
-        $reply=Reply::factory()->make(['thread_id'=>$thread->id]);
-
-        // act login and make reply
-        $response=$this->actingAs($user)->post("threads/{$thread->slug}/replies",$reply->toArray());
-
-//         assert status/redirect/see reply
-        $response->assertStatus(201);
-        $response->assertRedirect($thread->path());
-        $this->get($thread->path())->assertSee($reply->body);
-    }
-
-    public function test_unauthenticated_users_cannot_make_replies()
-    {
-
-        //arrange auth_user make reply to thread
-        $thread=Thread::factory()->create();
-        $reply=Reply::factory()->make(['thread_id'=>$thread->id]);
-
-        // act login and
-        $response=$this->post("threads/{$thread->slug}/replies",$reply->toArray());
-        // assert true
-        $response->assertRedirect('/login');
-    }
 
     public function test_authenticated_user_can_make_thread()
     {
 //     Arrange we have authenticated user and thread date
        $user= User::factory()->create();
        $threadData=Thread::factory()->raw();
-
 //      Act auth user submit thread data
         $res=$this->actingAs($user)->post('/threads',$threadData);
 
@@ -68,10 +40,37 @@ class CreateThread_and_ReplyTest extends TestCase
         $threadData=Thread::factory()->raw();
 
 //      Act guest submit thread data
-        $res=$this->post('/threads',$threadData);
-
 //      Assert redirect login
-        $res->assertRedirect(route('login'));
+
+        $this->post('/threads',$threadData)->assertRedirect(route('login'));
+        $this->get('/threads/create',$threadData)->assertRedirect(route('login'));
+    }
+
+    public function test_thread_require_body(){
+        $threadData=Thread::factory()->make(['body'=>null]);
+        $user= User::factory()->create();
+
+        $response=$this->actingAs($user)->post('/threads',$threadData->toArray());
+
+        $response->assertSessionHasErrors(['body']);
+    }
+
+    public function test_thread_require_title(){
+        $threadData=Thread::factory()->make(['title'=>null]);
+        $user= User::factory()->create();
+
+        $response=$this->actingAs($user)->post('/threads',$threadData->toArray());
+
+        $response->assertSessionHasErrors(['title']);
+    }
+
+    public function test_thread_require_valid_channel(){
+        $channel=Channel::factory()->create();
+        $user= User::factory()->create();
+        $threadData1=Thread::factory()->make(['channel_id'=>9999]);
+        $threadData2=Thread::factory()->make(['channel_id'=>null]);
+        $this->actingAs($user)->post('/threads',$threadData1->toArray())->assertSessionHasErrors(['channel_id']);
+        $this->actingAs($user)->post('/threads',$threadData2->toArray())->assertSessionHasErrors(['channel_id']);
     }
 }
 

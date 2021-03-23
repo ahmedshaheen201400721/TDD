@@ -18,10 +18,20 @@ Route::get('/', function () {
 });
 
 Route::get('threads',[\App\Http\Controllers\ThreadController::class,'index'])->name('threads.index');
+
+Route::get('{channel:slug}/threads/{thread:slug?}',[\App\Http\Controllers\ThreadController::class,'show'])->name('threads.show');
+
+//Route::get('{channel:slug}/threads/',[\App\Http\Controllers\ChannelController::class,'index'])->name('channel.show');
+
+
 Route::post('threads',[\App\Http\Controllers\ThreadController::class,'store'])->name('threads.store');
-Route::get('threads/{thread:slug}',[\App\Http\Controllers\ThreadController::class,'show'])->name('threads.show');
+Route::get('threads/create',[\App\Http\Controllers\ThreadController::class,'create'])->name('threads.create');
+
+
 
 Route::post('threads/{thread:slug}/replies',[\App\Http\Controllers\ReplyController::class,'store'])->name('replies.store');
+
+Route::post('/replies/{reply}/like',[\App\Http\Controllers\LikeController::class,'store'])->name('like');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

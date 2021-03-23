@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Channel;
 use App\Models\Reply;
+use App\Models\Thread;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,8 +16,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-         $threads=\App\Models\Thread::factory(40)->create();
-         $threads->each(fn($thread)=>Reply::factory()->count(4)->create(['thread_id'=>$thread->id,'user_id'=>$thread->user->id]));
+        $channels=Channel::factory()->count(6)->create();
+        $channels->each(fn($channel)=>\App\Models\Thread::factory()->count(6)->create(['channel_id'=>$channel->id]));
+        $threads=\App\Models\Thread::all();
+        $threads->each(fn($thread)=> Reply::factory()->count(array_rand(range(1,10)))->create(['thread_id'=>$thread->id,'user_id'=>$thread->author->id]));
 
     }
 }

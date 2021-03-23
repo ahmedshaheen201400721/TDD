@@ -2,19 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Channel;
-use App\Models\Thread;
-use App\Models\User;
+use App\Models\Like;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ThreadFactory extends Factory
+class LikeFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Thread::class;
+    protected $model = Like::class;
 
     /**
      * Define the model's default state.
@@ -25,10 +23,6 @@ class ThreadFactory extends Factory
     {
         return [
             //
-            'title'=>$this->faker->sentence,
-            'body'=>$this->faker->paragraph,
-            'user_id'=>User::factory(),
-            'channel_id'=>Channel::factory(),
         ];
     }
 }

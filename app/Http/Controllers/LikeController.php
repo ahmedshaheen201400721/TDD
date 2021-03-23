@@ -2,20 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Channel;
+use App\Models\Like;
+use App\Models\Reply;
 use Illuminate\Http\Request;
 
-class ChannelController extends Controller
+class LikeController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->only('store');
+    }
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Channel $channel)
+    public function index()
     {
-
-
+        //
     }
 
     /**
@@ -34,18 +39,21 @@ class ChannelController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Reply $reply)
     {
-        //
+        $reply->incrementLikes();
+
+        return redirect()->back();
+
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Channel  $channel
+     * @param  \App\Models\Like  $like
      * @return \Illuminate\Http\Response
      */
-    public function show(Channel $channel)
+    public function show(Like $like)
     {
         //
     }
@@ -53,10 +61,10 @@ class ChannelController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Channel  $channel
+     * @param  \App\Models\Like  $like
      * @return \Illuminate\Http\Response
      */
-    public function edit(Channel $channel)
+    public function edit(Like $like)
     {
         //
     }
@@ -65,10 +73,10 @@ class ChannelController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Channel  $channel
+     * @param  \App\Models\Like  $like
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Channel $channel)
+    public function update(Request $request, Like $like)
     {
         //
     }
@@ -76,10 +84,10 @@ class ChannelController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Channel  $channel
+     * @param  \App\Models\Like  $like
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Channel $channel)
+    public function destroy(Like $like)
     {
         //
     }
