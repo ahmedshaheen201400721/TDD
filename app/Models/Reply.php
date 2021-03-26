@@ -2,14 +2,16 @@
 
 namespace App\Models;
 
+use App\support\filters\traits\likeable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Reply extends Model
 {
-    use HasFactory;
+
+    use HasFactory,likeable;
     protected $guarded=[];
-    protected $with=['owner'];
+    protected $with=['owner','likes'];
 
     public function owner(){
         return $this->belongsTo(User::class,'user_id');
@@ -19,13 +21,7 @@ class Reply extends Model
         return $this->belongsTo(Thread::class);
     }
 
-    public function likes(){
-        return $this->morphMany(Like::class,'likeable');
-    }
-    public function incrementLikes(){
-        if(!$this->likes()->where("user_id",auth()->id())->exists()){
-            $this->likes()->create(['user_id'=>auth()->id()]);
-        }
-    }
+
+
 
 }

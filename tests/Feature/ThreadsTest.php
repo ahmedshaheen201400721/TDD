@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use App\Models\Reply;
 use App\Models\Thread;
+use App\Models\User;
 use Database\Factories\ThreadFactory;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
@@ -42,4 +43,31 @@ class ThreadsTest extends TestCase
         $response=$this->get($this->thread->path());
         $response->assertSee($reply->body);
     }
+    public function test_valid_user_can_delete_thread(){
+        $user=User::factory()->create();
+        $thread=Thread::factory()->create(['user_id'=>$user->id]);
+        $this->actingAs($user);
+        $this->delete("threads/{$thread->slug}");
+        $this->assertDatabaseMissing('threads',['slug'=>$thread->slug]);
+
+    }
+    public function test_invalid_user_cannot_delete_thread(){
+        $user=User::factory()->create();
+        $thread=Thread::factory()->create();
+        $this->actingAs($user);
+        $this->delete("threads/{$thread->slug}")->assertStatus(403);
+
+    }
+    public function test_valid_user_can_delete_thread_and_its_replies(){
+        $user=User::factory()->create();
+        $thread=Thread::factory()->create(['user_id'=>$user->id]);
+        $reply=Reply::factory()->create(['user_id'=>$user->id,'thread_id'=>$thread->id]);
+        $this->actingAs($user);
+        $this->delete("threads/{$thread->slug}");
+        $this->assertDatabaseMissing('threads',['slug'=>$thread->slug]);
+        $this->assertDatabaseMissing('replies',['slug'=>$reply->body]);
+
+    }
+
+
 }

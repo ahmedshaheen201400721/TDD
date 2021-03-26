@@ -3,16 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\Channel;
+use App\Models\Reply;
 use App\Models\Thread;
 use App\support\filters\QueryFilter;
 use App\support\filters\ThreadFilter;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ThreadController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->only(['store','create']);
+        $this->middleware('auth')->only(['store','create','delete']);
     }
 
     /**
@@ -30,6 +32,8 @@ class ThreadController extends Controller
         $threads=Thread::inRandomOrder()->paginate(10);
     }
         $threads->loadCount('replies');
+        $threads->load('channel:id,slug','author');
+
         return view('threads.index',['threads'=>$threads]);
     }
 
@@ -40,7 +44,6 @@ class ThreadController extends Controller
      */
     public function create()
     {
-        //
         return view('threads.create');
     }
 
@@ -71,19 +74,17 @@ class ThreadController extends Controller
     public function show(Channel $channel,Thread $thread)
     {
 
-
         if($thread->exists){
-            $thread->load(['author','replies']);
+            $thread->load('replies');
             return view('threads.show',['thread'=>$thread,'channel'=>$channel]);
 
         }else{
-            $threads=$channel->threads()->withCount('replies')->paginate();
+            $threads=$channel->threads()->withCount('replies')->with('channel:id,slug')->paginate();
             return view('threads.index',['threads'=>$threads,'channel'=>$channel]);
         }
 
-//        $replies=$thread->replies;
-
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -116,6 +117,9 @@ class ThreadController extends Controller
      */
     public function destroy(Thread $thread)
     {
-        //
+        $this->authorize('update',$thread);
+        $thread->replies()->delete();
+        $thread->delete();
+        return back();
     }
 }

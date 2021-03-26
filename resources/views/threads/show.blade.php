@@ -57,16 +57,14 @@
                             <div class="p-6 bg-white flex justify-between ">
                                 <div>
                                     <div> <strong>{{$reply->owner->name}}</strong>said that</div>
-                                    <div> {{$reply->likes()->count().' '.\Illuminate\Support\Str::plural('like',$reply->likes()->count())}} </div>
+                                    <div> {{$reply->likeCount().' '.\Illuminate\Support\Str::plural('like',$reply->likeCount())}} </div>
                                     <div class="p-2 font-bold border-b border-gray-200">{{ $reply->body}}</div>
                                 </div>
                                 <div>
                                     {{$reply->created_at->diffForHumans()}}
-                                    <form action="{{route('like',$reply)}}" method="post">
-                                        @csrf
-
-                                        <x-button>like</x-button>
-                                    </form>
+                                    @auth
+                                   <x-like action="{{route('like',$reply)}}" disabled="{{$reply->isLiked()}}"></x-like>
+                                    @endauth
                                 </div>
                             </div>
 

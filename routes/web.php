@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//\Illuminate\Support\Facades\DB::listen(fn($query)=>dump($query->sql));
+Route::get('/test',fn()=>dump(auth()->check()));
 
 Route::get('/', function () {
     return view('welcome');
@@ -25,13 +27,13 @@ Route::get('{channel:slug}/threads/{thread:slug?}',[\App\Http\Controllers\Thread
 
 
 Route::post('threads',[\App\Http\Controllers\ThreadController::class,'store'])->name('threads.store');
+Route::delete('threads/{thread:slug}',[\App\Http\Controllers\ThreadController::class,'destroy'])->name('threads.destroy');
 Route::get('threads/create',[\App\Http\Controllers\ThreadController::class,'create'])->name('threads.create');
-
-
-
 Route::post('threads/{thread:slug}/replies',[\App\Http\Controllers\ReplyController::class,'store'])->name('replies.store');
 
 Route::post('/replies/{reply}/like',[\App\Http\Controllers\LikeController::class,'store'])->name('like');
+
+Route::get('/profile/{user:uuid}',[\App\Http\Controllers\ProfileController::class,'show'])->name('profile.show');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

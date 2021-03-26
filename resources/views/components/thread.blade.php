@@ -6,6 +6,10 @@
                     <div class="p-2 font-bold border-b border-gray-200">
                         <a href="{{$thread->path()}}">{{ $thread->title}}</a>
                     </div>
+                    <div class="p-2 font-bold border-b border-gray-200">
+                        <div class="text-4xl inline"> author: </div>
+                        <a href="{{route('profile.show',$thread->author)}}">{{ $thread->author->name}}</a>
+                    </div>
                 </div>
                 <div>
                     {{$thread->created_at->diffForHumans()}}

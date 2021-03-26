@@ -22,6 +22,7 @@
                         {{ __('threads') }}
                     </x-nav-link>
                 </div>
+
                 <div class="hidden sm:flex sm:items-center sm:ml-6">
                     <x-dropdown align="right" width="48">
                         <x-slot name="trigger">
@@ -40,7 +41,7 @@
 
                         <x-slot name="content">
                             <!-- Authentication -->
-                            @foreach(\App\Models\Channel::all() as $channel)
+                            @foreach(\Illuminate\Support\Facades\Cache::rememberForever('channels',fn()=>\App\Models\Channel::all() ) as $channel)
                                 <x-dropdown-link :href="$url=route('threads.show',['channel'=> $channel->slug])">
                                     {{$channel->name}}
                                 </x-dropdown-link>

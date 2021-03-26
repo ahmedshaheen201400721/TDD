@@ -11,40 +11,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b7618e1-cd85-4885-9fb6-ab9f059ab210" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/support/filters/QueryFilter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/support/filters/ThreadFilter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/error.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/thread.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/threads/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/threads/test.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/LikeTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/ReplyTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/support/filters/helper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/support/filters/traits/likeable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/threads-button.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/profile/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ChannelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ChannelController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReplyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReplyController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ThreadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ThreadController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Channel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Channel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Like.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Like.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Reply.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Reply.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Thread.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Thread.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/ThreadFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ThreadFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_09_153149_create_threads_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_09_153159_create_replies_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_19_161154_create_channels_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_19_161154_create_channels_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/button.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/button.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/dropdown-link.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/dropdown-link.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/components/input.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/input.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/label.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/label.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/thread.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/thread.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navigation.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/threads/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/threads/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/threads/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/threads/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/AuthenticationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/auth/AuthenticationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/CreateThread_and_ReplyTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CreateThread_and_ReplyTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/EmailVerificationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/auth/EmailVerificationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/PasswordConfirmationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/auth/PasswordConfirmationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/PasswordResetTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/auth/PasswordResetTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/RegistrationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/auth/RegistrationTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/LikeTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/LikeTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ThreadsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ThreadsTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +179,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -202,50 +187,55 @@
       <recent name="$PROJECT_DIR$/app" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.LikeTest.user_can_like_replies">
-    <configuration name="CreateThread_and_ReplyTest.test_authenticated_user_can_make_thread" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="pa make:controller ProfileController -r" />
+    </option>
+  </component>
+  <component name="RunManager" selected="PHPUnit.ThreadsTest.test_valid_user_can_delete_thread_and_its_replies">
+    <configuration name="ProfileTest.when_user_viist_profile_he_sees_his_name" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <CommandLine>
         <PhpTestInterpreterSettings>
           <option name="interpreterName" value="PHP 7.4" />
         </PhpTestInterpreterSettings>
       </CommandLine>
-      <TestRunner class="Tests\Feature\CreateThread_and_ReplyTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CreateThread_and_ReplyTest.php" method="test_authenticated_user_can_make_thread" scope="Method" />
+      <TestRunner class="Tests\Feature\ProfileTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ProfileTest.php" method="when_user_viist_profile_he_sees_his_name" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="LikeTest.user_can_like_replies" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+    <configuration name="ProfileTest.when_user_viist_profile_he_sees_his_threads" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <CommandLine>
         <PhpTestInterpreterSettings>
           <option name="interpreterName" value="PHP 7.4" />
         </PhpTestInterpreterSettings>
       </CommandLine>
-      <TestRunner class="Tests\Feature\LikeTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LikeTest.php" method="user_can_like_replies" scope="Method" />
+      <TestRunner class="Tests\Feature\ProfileTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ProfileTest.php" method="when_user_viist_profile_he_sees_his_threads" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ThreadFilterTest.a_user_can_filter_threads_according_number_of_replies" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+    <configuration name="ThreadsTest.test_invalid_user_cannot_delete_thread" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <CommandLine>
         <PhpTestInterpreterSettings>
           <option name="interpreterName" value="PHP 7.4" />
         </PhpTestInterpreterSettings>
       </CommandLine>
-      <TestRunner class="Tests\Feature\ThreadFilterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ThreadFilterTest.php" method="a_user_can_filter_threads_according_number_of_replies" scope="Method" />
+      <TestRunner class="Tests\Feature\ThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ThreadsTest.php" method="test_invalid_user_cannot_delete_thread" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ThreadFilterTest.a_user_can_filter_threads_acoording_author" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+    <configuration name="ThreadsTest.test_valid_user_can_delete_thread" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <CommandLine>
         <PhpTestInterpreterSettings>
           <option name="interpreterName" value="PHP 7.4" />
         </PhpTestInterpreterSettings>
       </CommandLine>
-      <TestRunner class="Tests\Feature\ThreadFilterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ThreadFilterTest.php" method="a_user_can_filter_threads_acoording_author" scope="Method" />
+      <TestRunner class="Tests\Feature\ThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ThreadsTest.php" method="test_valid_user_can_delete_thread" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ThreadFilterTest.a_user_can_filter_threads_acoording_channel_slug" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+    <configuration name="ThreadsTest.test_valid_user_can_delete_thread_and_its_replies" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <CommandLine>
         <PhpTestInterpreterSettings>
           <option name="interpreterName" value="PHP 7.4" />
         </PhpTestInterpreterSettings>
       </CommandLine>
-      <TestRunner class="Tests\Feature\ThreadFilterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ThreadFilterTest.php" method="a_user_can_filter_threads_acoording_channel_slug" scope="Method" />
+      <TestRunner class="Tests\Feature\ThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ThreadsTest.php" method="test_valid_user_can_delete_thread_and_its_replies" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -254,11 +244,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.LikeTest.user_can_like_replies" />
-        <item itemvalue="PHPUnit.ThreadFilterTest.a_user_can_filter_threads_according_number_of_replies" />
-        <item itemvalue="PHPUnit.ThreadFilterTest.a_user_can_filter_threads_acoording_author" />
-        <item itemvalue="PHPUnit.ThreadFilterTest.a_user_can_filter_threads_acoording_channel_slug" />
-        <item itemvalue="PHPUnit.CreateThread_and_ReplyTest.test_authenticated_user_can_make_thread" />
+        <item itemvalue="PHPUnit.ThreadsTest.test_valid_user_can_delete_thread_and_its_replies" />
+        <item itemvalue="PHPUnit.ThreadsTest.test_invalid_user_cannot_delete_thread" />
+        <item itemvalue="PHPUnit.ThreadsTest.test_valid_user_can_delete_thread" />
+        <item itemvalue="PHPUnit.ProfileTest.when_user_viist_profile_he_sees_his_threads" />
+        <item itemvalue="PHPUnit.ProfileTest.when_user_viist_profile_he_sees_his_name" />
       </list>
     </recent_temporary>
   </component>
@@ -286,6 +276,10 @@
       <workItem from="1616343405958" duration="3030000" />
       <workItem from="1616399425625" duration="30000" />
       <workItem from="1616484695968" duration="23093000" />
+      <workItem from="1616658116394" duration="1474000" />
+      <workItem from="1616676285013" duration="3792000" />
+      <workItem from="1616751884323" duration="1555000" />
+      <workItem from="1616757453276" duration="15608000" />
     </task>
     <servers />
   </component>
@@ -305,6 +299,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="268" y="55" width="824" height="683" key="#CLI_Interpreters" timestamp="1616676726904">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="268" y="55" width="824" height="683" key="#CLI_Interpreters/0.27.1366.741@0.27.1366.741" timestamp="1616676726904" />
     <state x="316" y="27" width="737" height="740" key="#CreateThread_and_ReplyTest" timestamp="1616166477044">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -329,10 +327,26 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="316" y="27" width="737" height="740" key="#FilterTest.a_user_can_filter_threads_acoording_channel_slug/0.27.1366.741@0.27.1366.741" timestamp="1616254703525" />
+    <state x="316" y="27" width="737" height="740" key="#LikeTest.guest_cannot_like_replies" timestamp="1616676512504">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="316" y="27" width="737" height="740" key="#LikeTest.guest_cannot_like_replies/0.27.1366.741@0.27.1366.741" timestamp="1616676512504" />
     <state x="316" y="27" width="737" height="740" key="#LikeTest.user_can_like_replies" timestamp="1616513173176">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="316" y="27" width="737" height="740" key="#LikeTest.user_can_like_replies/0.27.1366.741@0.27.1366.741" timestamp="1616513173176" />
+    <state x="316" y="27" width="737" height="740" key="#LikeTest.user_can_like_replies_only_once" timestamp="1616676729851">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="316" y="27" width="737" height="740" key="#LikeTest.user_can_like_replies_only_once/0.27.1366.741@0.27.1366.741" timestamp="1616676729851" />
+    <state x="316" y="27" width="737" height="740" key="#ProfileTest.when_user_viist_profile_he_sees_his_name" timestamp="1616774161925">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="316" y="27" width="737" height="740" key="#ProfileTest.when_user_viist_profile_he_sees_his_name/0.27.1366.741@0.27.1366.741" timestamp="1616774161925" />
+    <state x="316" y="27" width="737" height="740" key="#ProfileTest.when_user_viist_profile_he_sees_his_threads" timestamp="1616774574313">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="316" y="27" width="737" height="740" key="#ProfileTest.when_user_viist_profile_he_sees_his_threads/0.27.1366.741@0.27.1366.741" timestamp="1616774574313" />
     <state x="316" y="27" width="737" height="740" key="#ReplyTest.test_reply_owner_exist" timestamp="1616161532772">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -349,6 +363,18 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="316" y="27" width="737" height="740" key="#ThreadFilterTest.a_user_can_filter_threads_acoording_channel_slug/0.27.1366.741@0.27.1366.741" timestamp="1616499815791" />
+    <state x="316" y="27" width="737" height="740" key="#ThreadsTest.test_invalid_user_cannot_delete_thread" timestamp="1616779339047">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="316" y="27" width="737" height="740" key="#ThreadsTest.test_invalid_user_cannot_delete_thread/0.27.1366.741@0.27.1366.741" timestamp="1616779339047" />
+    <state x="316" y="27" width="737" height="740" key="#ThreadsTest.test_valid_user_can_delete_thread" timestamp="1616777866161">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="316" y="27" width="737" height="740" key="#ThreadsTest.test_valid_user_can_delete_thread/0.27.1366.741@0.27.1366.741" timestamp="1616777866161" />
+    <state x="316" y="27" width="737" height="740" key="#ThreadsTest.test_valid_user_can_delete_thread_and_its_replies" timestamp="1616779860439">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="316" y="27" width="737" height="740" key="#ThreadsTest.test_valid_user_can_delete_thread_and_its_replies/0.27.1366.741@0.27.1366.741" timestamp="1616779860439" />
     <state x="402" y="229" width="551" height="334" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1616167773378">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -365,46 +391,46 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="242" y="27" width="862" height="740" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1366.741@0.27.1366.741" timestamp="1616499798550" />
-    <state x="416" y="155" width="524" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1616508712018">
+    <state x="416" y="155" width="524" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1616773032396">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="416" y="155" width="524" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1366.741@0.27.1366.741" timestamp="1616508712018" />
+    <state x="416" y="155" width="524" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1366.741@0.27.1366.741" timestamp="1616773032396" />
     <state x="466" y="155" width="424" height="483" key="FileChooserDialogImpl" timestamp="1616144247413">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="466" y="155" width="424" height="483" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1616144247413" />
-    <state width="1320" height="489" key="GridCell.Tab.0.bottom" timestamp="1616513822647">
+    <state width="1320" height="489" key="GridCell.Tab.0.bottom" timestamp="1616779886056">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="489" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1616513822647" />
-    <state width="1320" height="489" key="GridCell.Tab.0.center" timestamp="1616513822645">
+    <state width="1320" height="489" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1616779886056" />
+    <state width="1320" height="489" key="GridCell.Tab.0.center" timestamp="1616779886055">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="489" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1616513822645" />
-    <state width="1320" height="489" key="GridCell.Tab.0.left" timestamp="1616513822643">
+    <state width="1320" height="489" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1616779886055" />
+    <state width="1320" height="489" key="GridCell.Tab.0.left" timestamp="1616779886054">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="489" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1616513822643" />
-    <state width="1320" height="489" key="GridCell.Tab.0.right" timestamp="1616513822646">
+    <state width="1320" height="489" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1616779886054" />
+    <state width="1320" height="489" key="GridCell.Tab.0.right" timestamp="1616779886055">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="489" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1616513822646" />
-    <state x="346" y="113" width="663" height="567" key="NewPhpClassDialog" timestamp="1616503132731">
+    <state width="1320" height="489" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1616779886055" />
+    <state x="346" y="113" width="679" height="567" key="NewPhpClassDialog" timestamp="1616772980237">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="346" y="113" width="663" height="567" key="NewPhpClassDialog/0.27.1366.741@0.27.1366.741" timestamp="1616503132731" />
-    <state x="479" y="322" width="317" height="150" key="NewPhpFileDialog" timestamp="1616519618151">
+    <state x="346" y="113" width="679" height="567" key="NewPhpClassDialog/0.27.1366.741@0.27.1366.741" timestamp="1616772980237" />
+    <state x="479" y="322" width="307" height="150" key="NewPhpFileDialog" timestamp="1616773822947">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="479" y="322" width="317" height="150" key="NewPhpFileDialog/0.27.1366.741@0.27.1366.741" timestamp="1616519618151" />
-    <state x="172" y="32" key="SettingsEditor" timestamp="1616171251032">
+    <state x="479" y="322" width="307" height="150" key="NewPhpFileDialog/0.27.1366.741@0.27.1366.741" timestamp="1616773822947" />
+    <state x="172" y="32" key="SettingsEditor" timestamp="1616677231298">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="172" y="32" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1616171251032" />
-    <state x="412" y="132" width="642" height="524" key="StructurePopup" timestamp="1615398317814">
+    <state x="172" y="32" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1616677231298" />
+    <state x="412" y="132" width="642" height="524" key="StructurePopup" timestamp="1616779495803">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="412" y="132" width="642" height="524" key="StructurePopup/0.27.1366.741@0.27.1366.741" timestamp="1615398317814" />
+    <state x="412" y="132" width="642" height="524" key="StructurePopup/0.27.1366.741@0.27.1366.741" timestamp="1616779495803" />
     <state x="458" y="311" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612519758574">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -413,18 +439,18 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="373" y="100" width="620" height="594" key="find.popup/0.27.1366.741@0.27.1366.741" timestamp="1616499783578" />
-    <state x="347" y="176" key="run.anything.popup" timestamp="1616505336666">
+    <state x="347" y="176" width="672" height="677" key="run.anything.popup" timestamp="1616773708657">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="347" y="176" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1616505336666" />
+    <state x="347" y="176" width="672" height="677" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1616773708657" />
     <state x="456" y="205" key="save.file.as.template.dialog" timestamp="1615304687562">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="456" y="205" key="save.file.as.template.dialog/0.27.1366.741@0.27.1366.741" timestamp="1615304687562" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1616513882312">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1616779422787">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1616513882312" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1616779422787" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
