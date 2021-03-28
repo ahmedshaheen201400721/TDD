@@ -3,13 +3,14 @@
 namespace App\Models;
 
 use App\support\filters\QueryFilter;
+use App\support\filters\traits\RecordActivity;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
 class Thread extends Model
 {
-    use HasFactory;
+    use HasFactory,RecordActivity;
     protected $guarded=[];
 
     // create slug for any thread
@@ -20,6 +21,7 @@ class Thread extends Model
             $thread->slug=Str::slug($thread->title);
         });
     }
+
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
