@@ -45,14 +45,16 @@ class ReplyController extends Controller
      */
     public function store(Request $request,Thread $thread)
     {
-//        dd(\request('body'));
+//        dd(\request('body').$thread.$request->user_id);
+
         $request->validate([
             'body'=>'required',
-            'user_id'=>'required|Exists:users,id',
-            'thread_id'=>'required|Exists:threads,id',
         ]);
-        $thread->addReply();
-        return redirect($thread->path(),201);
+
+        $reply=$thread->addReply();
+        $reply=Reply::where('id',$reply->id)->with('owner')->get();
+        return response($reply,201);
+//        return redirect($thread->path(),201);
     }
 
     /**
@@ -86,7 +88,10 @@ class ReplyController extends Controller
      */
     public function update(Request $request, Reply $reply)
     {
-        //
+        $this->authorize('update',$reply);
+        $reply->body=$request->body;
+        $reply->save();
+        return response($reply->fresh(),202);
     }
 
     /**
@@ -97,6 +102,9 @@ class ReplyController extends Controller
      */
     public function destroy(Reply $reply)
     {
-        //
+        $this->authorize('update',$reply);
+         $send=$reply;
+        $reply->delete();
+        if(\request()->expectsJson()) return response($send,202);
     }
 }

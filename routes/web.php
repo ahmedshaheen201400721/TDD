@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,37 +14,49 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//\Illuminate\Support\Facades\DB::listen(fn($query)=>dump($query->sql));
-Route::get('/test',fn()=>dump(auth()->check()));
+//
+////\Illuminate\Support\Facades\DB::listen(fn($query)=>dump($query->sql));
+//Route::get('/test',fn()=>auth()->user()->feed());
+Route::get('/test',fn()=> Inertia::render('Threads/Show'));
+//
+//
+Route::get('threads',[\App\Http\Controllers\ThreadController::class,'index'])->name('Threads.index');
+//
+Route::get('{channel:slug}/threads/{thread:slug?}',[\App\Http\Controllers\ThreadController::class,'show'])->name('Threads.show');
+//
+Route::post('{channel:slug}/threads/{thread:slug?}/subscribe',[\App\Http\Controllers\SubscriptionController::class,'store'])->name('subscription.store');
+Route::delete('{channel:slug}/threads/{thread:slug?}/subscribe',[\App\Http\Controllers\SubscriptionController::class,'destroy'])->name('subscription.destroy');
+
+//Route::get('{channel:slug}/Threads/',[\App\Http\Controllers\ChannelController::class,'index'])->name('channel.show');
+//
+//
+Route::post('threads',[\App\Http\Controllers\ThreadController::class,'store'])->name('Threads.store');
+Route::delete('threads/{thread:slug}',[\App\Http\Controllers\ThreadController::class,'destroy'])->name('Threads.destroy');
+Route::get('threads/create',[\App\Http\Controllers\ThreadController::class,'create'])->name('Threads.create');
+
+Route::post('threads/{thread:slug}/replies',[\App\Http\Controllers\ReplyController::class,'store'])->name('replies.store');
+Route::delete('threads/replies/{reply}',[\App\Http\Controllers\ReplyController::class,'destroy'])->name('replies.destroy');
+Route::patch('threads/replies/{reply}',[\App\Http\Controllers\ReplyController::class,'update'])->name('replies.update');
+//
+Route::post('/replies/{reply}/like',[\App\Http\Controllers\LikeController::class,'store'])->name('like');
+//
+Route::get('/profile/{user:uuid}',[\App\Http\Controllers\ProfileController::class,'show'])->name('profile.index');
+//
+
+
+
 
 Route::get('/', function () {
-    return view('welcome');
+    return Inertia::render('Welcome', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+        'laravelVersion' => Application::VERSION,
+        'phpVersion' => PHP_VERSION,
+    ]);
 });
 
-Route::get('threads',[\App\Http\Controllers\ThreadController::class,'index'])->name('threads.index');
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+//    return "ahmed";
+    return Inertia::render('Dashboard');
 
-Route::get('{channel:slug}/threads/{thread:slug?}',[\App\Http\Controllers\ThreadController::class,'show'])->name('threads.show');
-
-//Route::get('{channel:slug}/threads/',[\App\Http\Controllers\ChannelController::class,'index'])->name('channel.show');
-
-
-Route::post('threads',[\App\Http\Controllers\ThreadController::class,'store'])->name('threads.store');
-Route::delete('threads/{thread:slug}',[\App\Http\Controllers\ThreadController::class,'destroy'])->name('threads.destroy');
-Route::get('threads/create',[\App\Http\Controllers\ThreadController::class,'create'])->name('threads.create');
-Route::post('threads/{thread:slug}/replies',[\App\Http\Controllers\ReplyController::class,'store'])->name('replies.store');
-
-Route::post('/replies/{reply}/like',[\App\Http\Controllers\LikeController::class,'store'])->name('like');
-
-Route::get('/profile/{user:uuid}',[\App\Http\Controllers\ProfileController::class,'show'])->name('profile.show');
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
-require __DIR__.'/auth.php';
-
-Route::post('/avatars',function (\Illuminate\Http\Request $request){
-   $path=$request->image->store('','avatars');
-   dump($path);
-
-});
+})->name('dashboard');

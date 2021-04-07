@@ -28,11 +28,11 @@ class CreateThread_and_ReplyTest extends TestCase
        $user= User::factory()->create();
        $threadData=Thread::factory()->raw();
 //      Act auth user submit thread data
-        $res=$this->actingAs($user)->post('/threads',$threadData);
+        $res=$this->actingAs($user)->post('/Threads',$threadData);
 
 //      Assert seeing title.body when visiting path of this thread
-        $res->assertRedirect(route('threads.index'));
-        $this->get('threads')->assertSee($threadData['title'])->assertSee($threadData['body']);
+        $res->assertRedirect(route('Threads.index'));
+        $this->get('Threads')->assertSee($threadData['title'])->assertSee($threadData['body']);
     }
     public function test_guest_user_cannot_make_thread()
     {
@@ -42,15 +42,15 @@ class CreateThread_and_ReplyTest extends TestCase
 //      Act guest submit thread data
 //      Assert redirect login
 
-        $this->post('/threads',$threadData)->assertRedirect(route('login'));
-        $this->get('/threads/create',$threadData)->assertRedirect(route('login'));
+        $this->post('/Threads',$threadData)->assertRedirect(route('login'));
+        $this->get('/Threads/create',$threadData)->assertRedirect(route('login'));
     }
 
     public function test_thread_require_body(){
         $threadData=Thread::factory()->make(['body'=>null]);
         $user= User::factory()->create();
 
-        $response=$this->actingAs($user)->post('/threads',$threadData->toArray());
+        $response=$this->actingAs($user)->post('/Threads',$threadData->toArray());
 
         $response->assertSessionHasErrors(['body']);
     }
@@ -59,7 +59,7 @@ class CreateThread_and_ReplyTest extends TestCase
         $threadData=Thread::factory()->make(['title'=>null]);
         $user= User::factory()->create();
 
-        $response=$this->actingAs($user)->post('/threads',$threadData->toArray());
+        $response=$this->actingAs($user)->post('/Threads',$threadData->toArray());
 
         $response->assertSessionHasErrors(['title']);
     }
@@ -69,8 +69,8 @@ class CreateThread_and_ReplyTest extends TestCase
         $user= User::factory()->create();
         $threadData1=Thread::factory()->make(['channel_id'=>9999]);
         $threadData2=Thread::factory()->make(['channel_id'=>null]);
-        $this->actingAs($user)->post('/threads',$threadData1->toArray())->assertSessionHasErrors(['channel_id']);
-        $this->actingAs($user)->post('/threads',$threadData2->toArray())->assertSessionHasErrors(['channel_id']);
+        $this->actingAs($user)->post('/Threads',$threadData1->toArray())->assertSessionHasErrors(['channel_id']);
+        $this->actingAs($user)->post('/Threads',$threadData2->toArray())->assertSessionHasErrors(['channel_id']);
     }
 }
 

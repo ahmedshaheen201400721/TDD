@@ -46,8 +46,9 @@ class ProfileController extends Controller
      */
     public function show(User $user)
     {
-        $threads=$user->threads()->paginate(10);
-        return view("profile.show",['user'=>$user,'threads'=>$threads]);
+        $activities=$user->feed();
+        return $activities;
+//        return view("profile.show",['user'=>$user,'activities'=>$activities]);
     }
 
     /**

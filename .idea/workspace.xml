@@ -11,11 +11,75 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b7618e1-cd85-4885-9fb6-ab9f059ab210" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/support/filters/traits/RecordActivity.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Jetstream/form/DeleteButton.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Jetstream/replies/replies.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Jetstream/replies/reply.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Jetstream/subscription/subscribe.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Jetstream/threads/thread.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Threads/Show.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Threads/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/channels/channels.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/activities/activity.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/activities/created_like.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/activities/created_thread.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/channel-dropdown.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/delete-button.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/flash.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/modal.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/replies/replies.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/replies/reply.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/thread-card.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/forum.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/forum.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a.html" beforeDir="false" afterPath="$PROJECT_DIR$/a.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LikeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LikeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReplyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReplyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ThreadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ThreadController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Activity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Activity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Like.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Like.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Reply.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Reply.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Thread.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Thread.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/support/filters/traits/RecordActivity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/support/filters/traits/RecordActivity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/support/filters/traits/likeable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/support/filters/traits/likeable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/hashing.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/hashing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_20_153149_create_threads_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_20_153149_create_threads_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_20_153159_create_replies_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_20_153159_create_replies_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/components/dropdown.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/dropdown.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/input.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/input.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/thread.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/thread.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/threads-button.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/threads-button.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navigation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/threads/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/threads/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/threads/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/threads/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ActivityTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ActivityTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/CreateThread_and_ReplyTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CreateThread_and_ReplyTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ProfileTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ProfileTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ReplyTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ReplyTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ThreadFilterTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ThreadFilterTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ThreadsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ThreadsTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +94,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -144,12 +209,23 @@
       <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
       <path value="$PROJECT_DIR$/vendor/fakerphp/faker" />
       <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
-      <path value="$PROJECT_DIR$/vendor/laravel/breeze" />
       <path value="$PROJECT_DIR$/vendor/bumbummen99/shoppingcart" />
       <path value="$PROJECT_DIR$/vendor/ottaviano/faker-gravatar" />
       <path value="$PROJECT_DIR$/vendor/symfony/debug" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
       <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
+      <path value="$PROJECT_DIR$/vendor/dasprid/enum" />
+      <path value="$PROJECT_DIR$/vendor/mobiledetect/mobiledetectlib" />
+      <path value="$PROJECT_DIR$/vendor/jenssegers/agent" />
+      <path value="$PROJECT_DIR$/vendor/jaybizzle/crawler-detect" />
+      <path value="$PROJECT_DIR$/vendor/inertiajs/inertia-laravel" />
+      <path value="$PROJECT_DIR$/vendor/tightenco/ziggy" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/constant_time_encoding" />
+      <path value="$PROJECT_DIR$/vendor/laravel/fortify" />
+      <path value="$PROJECT_DIR$/vendor/laravel/jetstream" />
+      <path value="$PROJECT_DIR$/vendor/laravel/sanctum" />
+      <path value="$PROJECT_DIR$/vendor/bacon/bacon-qr-code" />
+      <path value="$PROJECT_DIR$/vendor/pragmarx/google2fa" />
     </include_path>
   </component>
   <component name="ProjectId" id="1o3bPNK7EZxCf3uJzwK7MKf9n6P" />
@@ -165,7 +241,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ultimate_project" />
+    <property name="editorconfig.notification" value="null" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -173,10 +250,12 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js/Jetstream" />
+      <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/tests/Feature/auth" />
       <recent name="$PROJECT_DIR$/app" />
     </key>
@@ -186,50 +265,59 @@
       <command value="pa make:controller ProfileController -r" />
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.ActivityTest.when_authUser_make_thread_he_has_activity (1)">
-    <configuration name="ActivityTest.when_authUser_make_reply_he_has_activity" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+  <component name="RunManager" selected="PHPUnit.SubscriptionTest.user_can_unsubscribe_to_thread">
+    <configuration name="SubscriptionTest.auth_user_can_subscribe_to_thread" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <CommandLine>
         <PhpTestInterpreterSettings>
           <option name="interpreterName" value="PHP 7.4" />
         </PhpTestInterpreterSettings>
       </CommandLine>
-      <TestRunner class="Tests\Feature\ActivityTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ActivityTest.php" method="when_authUser_make_reply_he_has_activity" scope="Method" />
+      <TestRunner class="Tests\Feature\SubscriptionTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/SubscriptionTest.php" method="auth_user_can_subscribe_to_thread" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ActivityTest.when_authUser_make_thread_he_has_activity (1)" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+    <configuration name="SubscriptionTest.auth_user_can_unsubscribe_to_thread" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <CommandLine>
         <PhpTestInterpreterSettings>
           <option name="interpreterName" value="PHP 7.4" />
         </PhpTestInterpreterSettings>
       </CommandLine>
-      <TestRunner class="Tests\Feature\ActivityTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ActivityTest.php" method="when_authUser_make_thread_he_has_activity" scope="Method" />
+      <TestRunner class="Tests\Feature\SubscriptionTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/SubscriptionTest.php" method="auth_user_can_unsubscribe_to_thread" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ActivityTest.when_authUser_make_thread_he_has_activity" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+    <configuration name="SubscriptionTest.test_example" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <CommandLine>
         <PhpTestInterpreterSettings>
           <option name="interpreterName" value="PHP 7.4" />
         </PhpTestInterpreterSettings>
       </CommandLine>
-      <TestRunner class="Tests\Unit\ActivityTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/ActivityTest.php" method="when_authUser_make_thread_he_has_activity" scope="Method" />
+      <TestRunner class="Tests\Feature\SubscriptionTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/SubscriptionTest.php" method="test_example" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ThreadsTest.test_invalid_user_cannot_delete_thread" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+    <configuration name="SubscriptionTest.user_can_subscribe_to_thread" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <CommandLine>
         <PhpTestInterpreterSettings>
           <option name="interpreterName" value="PHP 7.4" />
         </PhpTestInterpreterSettings>
       </CommandLine>
-      <TestRunner class="Tests\Feature\ThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ThreadsTest.php" method="test_invalid_user_cannot_delete_thread" scope="Method" />
+      <TestRunner class="Tests\Feature\SubscriptionTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/SubscriptionTest.php" method="user_can_subscribe_to_thread" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ThreadsTest.test_valid_user_can_delete_thread_and_its_replies" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+    <configuration name="SubscriptionTest.user_can_unsubscribe_to_thread" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <CommandLine>
         <PhpTestInterpreterSettings>
           <option name="interpreterName" value="PHP 7.4" />
         </PhpTestInterpreterSettings>
       </CommandLine>
-      <TestRunner class="Tests\Feature\ThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ThreadsTest.php" method="test_valid_user_can_delete_thread_and_its_replies" scope="Method" />
+      <TestRunner class="Tests\Feature\SubscriptionTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/SubscriptionTest.php" method="user_can_unsubscribe_to_thread" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ThreadsTest.a_valid_user_can_delete_thread" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP 7.4" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="Tests\Feature\ThreadsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ThreadsTest.php" method="a_valid_user_can_delete_thread" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -238,11 +326,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.ActivityTest.when_authUser_make_thread_he_has_activity (1)" />
-        <item itemvalue="PHPUnit.ActivityTest.when_authUser_make_reply_he_has_activity" />
-        <item itemvalue="PHPUnit.ActivityTest.when_authUser_make_thread_he_has_activity" />
-        <item itemvalue="PHPUnit.ThreadsTest.test_valid_user_can_delete_thread_and_its_replies" />
-        <item itemvalue="PHPUnit.ThreadsTest.test_invalid_user_cannot_delete_thread" />
+        <item itemvalue="PHPUnit.SubscriptionTest.user_can_unsubscribe_to_thread" />
+        <item itemvalue="PHPUnit.SubscriptionTest.auth_user_can_subscribe_to_thread" />
+        <item itemvalue="PHPUnit.SubscriptionTest.auth_user_can_unsubscribe_to_thread" />
+        <item itemvalue="PHPUnit.SubscriptionTest.test_example" />
+        <item itemvalue="PHPUnit.SubscriptionTest.user_can_subscribe_to_thread" />
       </list>
     </recent_temporary>
   </component>
@@ -276,7 +364,23 @@
       <workItem from="1616757453276" duration="17197000" />
       <workItem from="1616862768639" duration="725000" />
       <workItem from="1616865241469" duration="1309000" />
-      <workItem from="1616920605249" duration="4157000" />
+      <workItem from="1616920605249" duration="7360000" />
+      <workItem from="1616937044990" duration="2932000" />
+      <workItem from="1616941770510" duration="6601000" />
+      <workItem from="1617007982309" duration="6234000" />
+      <workItem from="1617018619958" duration="6785000" />
+      <workItem from="1617030671272" duration="7641000" />
+      <workItem from="1617183937707" duration="231000" />
+      <workItem from="1617184190724" duration="7324000" />
+      <workItem from="1617276022482" duration="12354000" />
+      <workItem from="1617353050745" duration="14447000" />
+      <workItem from="1617378915812" duration="1593000" />
+      <workItem from="1617459114118" duration="1645000" />
+      <workItem from="1617465196484" duration="2223000" />
+      <workItem from="1617525351412" duration="3834000" />
+      <workItem from="1617530027863" duration="7371000" />
+      <workItem from="1617540395867" duration="22060000" />
+      <workItem from="1617625398059" duration="10389000" />
     </task>
     <servers />
   </component>
@@ -296,6 +400,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="316" y="27" width="737" height="740" key="#ActivityTest.activity_has_subject" timestamp="1617277019556">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="316" y="27" width="737" height="740" key="#ActivityTest.activity_has_subject/0.27.1366.741@0.27.1366.741" timestamp="1617277019556" />
     <state x="316" y="27" width="737" height="740" key="#ActivityTest.when_authUser_make_reply_he_has_activity" timestamp="1616924981193">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -348,18 +456,50 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="316" y="27" width="737" height="740" key="#LikeTest.user_can_like_replies_only_once/0.27.1366.741@0.27.1366.741" timestamp="1616676729851" />
+    <state x="316" y="27" width="737" height="740" key="#ProfileTest.test_when_valid_user_delete_thread_and_its_replies_he_deletes_its_activites" timestamp="1617358744075">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="316" y="27" width="737" height="740" key="#ProfileTest.test_when_valid_user_delete_thread_and_its_replies_he_deletes_its_activites/0.27.1366.741@0.27.1366.741" timestamp="1617358744075" />
     <state x="316" y="27" width="737" height="740" key="#ProfileTest.when_user_viist_profile_he_sees_his_name" timestamp="1616774161925">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="316" y="27" width="737" height="740" key="#ProfileTest.when_user_viist_profile_he_sees_his_name/0.27.1366.741@0.27.1366.741" timestamp="1616774161925" />
-    <state x="316" y="27" width="737" height="740" key="#ProfileTest.when_user_viist_profile_he_sees_his_threads" timestamp="1616774574313">
+    <state x="316" y="27" width="737" height="740" key="#ProfileTest.when_user_viist_profile_he_sees_his_threads" timestamp="1617293785708">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="316" y="27" width="737" height="740" key="#ProfileTest.when_user_viist_profile_he_sees_his_threads/0.27.1366.741@0.27.1366.741" timestamp="1616774574313" />
+    <state x="316" y="27" width="737" height="740" key="#ProfileTest.when_user_viist_profile_he_sees_his_threads/0.27.1366.741@0.27.1366.741" timestamp="1617293785708" />
+    <state x="316" y="27" width="737" height="740" key="#ProfileTest.when_valid_user_delete_thread_he_delete_its_activities" timestamp="1617357047232">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="316" y="27" width="737" height="740" key="#ProfileTest.when_valid_user_delete_thread_he_delete_its_activities/0.27.1366.741@0.27.1366.741" timestamp="1617357047232" />
     <state x="316" y="27" width="737" height="740" key="#ReplyTest.test_reply_owner_exist" timestamp="1616161532772">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="316" y="27" width="737" height="740" key="#ReplyTest.test_reply_owner_exist/0.27.1366.741@0.27.1366.741" timestamp="1616161532772" />
+    <state x="316" y="27" width="737" height="740" key="#ReplyTest.test_unauthenticated_users_can_delete_replies" timestamp="1617619187238">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="316" y="27" width="737" height="740" key="#ReplyTest.test_unauthenticated_users_can_delete_replies/0.27.1366.741@0.27.1366.741" timestamp="1617619187238" />
+    <state x="316" y="27" width="737" height="740" key="#SubscriptionTest.auth_user_can_subscribe_to_thread" timestamp="1617637533006">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="316" y="27" width="737" height="740" key="#SubscriptionTest.auth_user_can_subscribe_to_thread/0.27.1366.741@0.27.1366.741" timestamp="1617637533006" />
+    <state x="316" y="27" width="737" height="740" key="#SubscriptionTest.auth_user_can_unsubscribe_to_thread" timestamp="1617637511847">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="316" y="27" width="737" height="740" key="#SubscriptionTest.auth_user_can_unsubscribe_to_thread/0.27.1366.741@0.27.1366.741" timestamp="1617637511847" />
+    <state x="316" y="27" width="737" height="740" key="#SubscriptionTest.test_example" timestamp="1617637428790">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="316" y="27" width="737" height="740" key="#SubscriptionTest.test_example/0.27.1366.741@0.27.1366.741" timestamp="1617637428790" />
+    <state x="316" y="27" width="737" height="740" key="#SubscriptionTest.user_can_subscribe_to_thread" timestamp="1617636572841">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="316" y="27" width="737" height="740" key="#SubscriptionTest.user_can_subscribe_to_thread/0.27.1366.741@0.27.1366.741" timestamp="1617636572841" />
+    <state x="316" y="27" width="737" height="740" key="#SubscriptionTest.user_can_unsubscribe_to_thread" timestamp="1617636830270">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="316" y="27" width="737" height="740" key="#SubscriptionTest.user_can_unsubscribe_to_thread/0.27.1366.741@0.27.1366.741" timestamp="1617636830270" />
     <state x="316" y="27" width="737" height="740" key="#ThreadFilterTest.a_user_can_filter_threads_according_number_of_replies" timestamp="1616510330164">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -372,14 +512,18 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="316" y="27" width="737" height="740" key="#ThreadFilterTest.a_user_can_filter_threads_acoording_channel_slug/0.27.1366.741@0.27.1366.741" timestamp="1616499815791" />
+    <state x="316" y="27" width="737" height="740" key="#ThreadsTest.a_valid_user_can_delete_thread" timestamp="1617356532996">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="316" y="27" width="737" height="740" key="#ThreadsTest.a_valid_user_can_delete_thread/0.27.1366.741@0.27.1366.741" timestamp="1617356532996" />
     <state x="316" y="27" width="737" height="740" key="#ThreadsTest.test_invalid_user_cannot_delete_thread" timestamp="1616779339047">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="316" y="27" width="737" height="740" key="#ThreadsTest.test_invalid_user_cannot_delete_thread/0.27.1366.741@0.27.1366.741" timestamp="1616779339047" />
-    <state x="316" y="27" width="737" height="740" key="#ThreadsTest.test_valid_user_can_delete_thread" timestamp="1616777866161">
+    <state x="316" y="27" width="737" height="740" key="#ThreadsTest.test_valid_user_can_delete_thread" timestamp="1617355874284">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="316" y="27" width="737" height="740" key="#ThreadsTest.test_valid_user_can_delete_thread/0.27.1366.741@0.27.1366.741" timestamp="1616777866161" />
+    <state x="316" y="27" width="737" height="740" key="#ThreadsTest.test_valid_user_can_delete_thread/0.27.1366.741@0.27.1366.741" timestamp="1617355874284" />
     <state x="316" y="27" width="737" height="740" key="#ThreadsTest.test_valid_user_can_delete_thread_and_its_replies" timestamp="1616779860439">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -400,46 +544,54 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="242" y="27" width="862" height="740" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1366.741@0.27.1366.741" timestamp="1616499798550" />
-    <state x="416" y="155" width="524" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1616923922510">
+    <state x="416" y="155" width="524" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1617637102154">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="416" y="155" width="524" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1366.741@0.27.1366.741" timestamp="1616923922510" />
+    <state x="416" y="155" width="524" height="483" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1366.741@0.27.1366.741" timestamp="1617637102154" />
     <state x="466" y="155" width="424" height="483" key="FileChooserDialogImpl" timestamp="1616144247413">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="466" y="155" width="424" height="483" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1616144247413" />
-    <state width="1366" height="525" key="GridCell.Tab.0.bottom" timestamp="1616925009749">
+    <state width="1366" height="312" key="GridCell.Tab.0.bottom" timestamp="1617645453183">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1366" height="525" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1616925009749" />
-    <state width="1366" height="525" key="GridCell.Tab.0.center" timestamp="1616925009748">
+    <state width="1366" height="312" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1617645453183" />
+    <state width="1366" height="312" key="GridCell.Tab.0.center" timestamp="1617645453182">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1366" height="525" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1616925009748" />
-    <state width="1366" height="525" key="GridCell.Tab.0.left" timestamp="1616925009747">
+    <state width="1366" height="312" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1617645453182" />
+    <state width="1366" height="312" key="GridCell.Tab.0.left" timestamp="1617645453181">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1366" height="525" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1616925009747" />
-    <state width="1366" height="525" key="GridCell.Tab.0.right" timestamp="1616925009748">
+    <state width="1366" height="312" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1617645453181" />
+    <state width="1366" height="312" key="GridCell.Tab.0.right" timestamp="1617645453182">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1366" height="525" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1616925009748" />
+    <state width="1366" height="312" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1617645453182" />
     <state x="346" y="113" width="679" height="567" key="NewPhpClassDialog" timestamp="1616923081039">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="346" y="113" width="679" height="567" key="NewPhpClassDialog/0.27.1366.741@0.27.1366.741" timestamp="1616923081039" />
-    <state x="479" y="322" width="307" height="150" key="NewPhpFileDialog" timestamp="1616773822947">
+    <state x="479" y="322" width="267" height="150" key="NewPhpFileDialog" timestamp="1617365489139">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="479" y="322" width="307" height="150" key="NewPhpFileDialog/0.27.1366.741@0.27.1366.741" timestamp="1616773822947" />
-    <state x="172" y="32" key="SettingsEditor" timestamp="1616677231298">
+    <state x="479" y="322" width="267" height="150" key="NewPhpFileDialog/0.27.1366.741@0.27.1366.741" timestamp="1617365489139" />
+    <state x="172" y="32" key="SettingsEditor" timestamp="1617276854553">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="172" y="32" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1616677231298" />
+    <state x="172" y="32" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1617276854553" />
     <state x="412" y="132" width="642" height="524" key="StructurePopup" timestamp="1616779495803">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="412" y="132" width="642" height="524" key="StructurePopup/0.27.1366.741@0.27.1366.741" timestamp="1616779495803" />
+    <state width="583" height="446" key="SwitcherDM" timestamp="1617184100338">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="583" height="446" key="SwitcherDM/0.27.1366.741@0.27.1366.741" timestamp="1617184100338" />
+    <state x="293" y="27" width="770" height="740" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1617545048445">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="293" y="27" width="770" height="740" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1366.741@0.27.1366.741" timestamp="1617545048445" />
     <state x="458" y="311" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612519758574">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -448,18 +600,18 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="373" y="100" width="620" height="594" key="find.popup/0.27.1366.741@0.27.1366.741" timestamp="1616499783578" />
-    <state x="347" y="176" width="672" height="677" key="run.anything.popup" timestamp="1616773708657">
+    <state x="347" y="176" width="672" height="677" key="run.anything.popup" timestamp="1617551308718">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="347" y="176" width="672" height="677" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1616773708657" />
+    <state x="347" y="176" width="672" height="677" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1617551308718" />
     <state x="456" y="205" key="save.file.as.template.dialog" timestamp="1615304687562">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="456" y="205" key="save.file.as.template.dialog/0.27.1366.741@0.27.1366.741" timestamp="1615304687562" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1616922024770">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1617644747373">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1616922024770" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1617644747373" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -474,6 +626,11 @@
           <line>21</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/threads/create.blade.php</url>
+          <line>9</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="php-line-method">
           <url>file://$PROJECT_DIR$/tests/Feature/ActivityTest.php</url>
           <line>16</line>
@@ -482,6 +639,15 @@
             <option name="methodName" value="when_authUser_make_thread_he_has_activity" />
           </properties>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/tests/Unit/SubscriptionTest.php</url>
+          <line>27</line>
+          <properties>
+            <option name="className" value="\Tests\Feature\SubscriptionTest" />
+            <option name="methodName" value="user_can_unsubscribe_to_thread" />
+          </properties>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

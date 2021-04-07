@@ -19,7 +19,7 @@
         <x-slot name="content">
             <!-- Authentication -->
             @foreach(\App\Models\Channel::all() as $channel)
-                <x-dropdown-link :href="$url=route('threads.show',['channel'=> $channel->slug])">
+                <x-dropdown-link :href="$url=route('Threads.show',['channel'=> $channel->slug])">
                     {{$channel->name}}
                 </x-dropdown-link>
             @endforeach

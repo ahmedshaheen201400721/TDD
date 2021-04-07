@@ -5,9 +5,7 @@ namespace Tests\Feature;
 use App\Models\Reply;
 use App\Models\Thread;
 use App\Models\User;
-use Database\Factories\ThreadFactory;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
 class ThreadsTest extends TestCase
@@ -27,7 +25,7 @@ class ThreadsTest extends TestCase
 
     public function test_user_can_view_all_threads()
     {
-        $response = $this->get('/threads');
+        $response = $this->get('/Threads');
         $response->assertStatus(200);
         $response->assertSee($this->thread->title);
     }
@@ -43,19 +41,23 @@ class ThreadsTest extends TestCase
         $response=$this->get($this->thread->path());
         $response->assertSee($reply->body);
     }
-    public function test_valid_user_can_delete_thread(){
-        $user=User::factory()->create();
-        $thread=Thread::factory()->create(['user_id'=>$user->id]);
+
+    /**
+     * @test
+     */
+    public function a_valid_user_can_delete_thread(){
+        $user = User::factory()->create();
         $this->actingAs($user);
-        $this->delete("threads/{$thread->slug}");
-        $this->assertDatabaseMissing('threads',['slug'=>$thread->slug]);
+        $thread = Thread::factory()->create(['user_id' => auth()->id()]);
+        $this->delete("Threads/{$thread->slug}");
+        $this->assertDatabaseMissing('Threads',['slug'=>$thread->slug]);
 
     }
     public function test_invalid_user_cannot_delete_thread(){
         $user=User::factory()->create();
         $thread=Thread::factory()->create();
         $this->actingAs($user);
-        $this->delete("threads/{$thread->slug}")->assertStatus(403);
+        $this->delete("Threads/{$thread->slug}")->assertStatus(403);
 
     }
     public function test_valid_user_can_delete_thread_and_its_replies(){
@@ -63,8 +65,8 @@ class ThreadsTest extends TestCase
         $thread=Thread::factory()->create(['user_id'=>$user->id]);
         $reply=Reply::factory()->create(['user_id'=>$user->id,'thread_id'=>$thread->id]);
         $this->actingAs($user);
-        $this->delete("threads/{$thread->slug}");
-        $this->assertDatabaseMissing('threads',['slug'=>$thread->slug]);
+        $this->delete("Threads/{$thread->slug}");
+        $this->assertDatabaseMissing('Threads',['slug'=>$thread->slug]);
         $this->assertDatabaseMissing('replies',['slug'=>$reply->body]);
 
     }

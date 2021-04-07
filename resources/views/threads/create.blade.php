@@ -6,23 +6,32 @@
         </h2>
     </x-slot>
 
-    <form action="{{route('threads.store')}}" method="post" class="w-3/4 mx-auto">
+    <x-flash type="success"  @fire.window="appear()">thread has been published</x-flash>
+    <form action="{{route('Threads.store')}}" method="post" class="w-3/4 mx-auto" x-data="{title:'',body:'',channel_id:null}"
+          @submit.prevent="axios.post('/Threads',{title:title,body:body,channel_id:channel_id}).then(data=>data.status).then(status=>
+         {if(status){
+         $dispatch('fire')
+         title='';
+         body='';
+         channel_id=null
+         }}
+          )">
         @csrf
         <div class="mt-3">
             <x-label value="title"></x-label>
-            <x-input type="text"  name="title" class="w-full" id="title" required></x-input>
+            <x-input type="text"  name="title" class="w-full" id="title" required x-model="title"></x-input>
         </div>
         <x-error value="title"></x-error>
 
 
         <div class="mt-3">
             <x-label value="body"></x-label>
-            <x-textarea name="body" id="body" required></x-textarea>
+            <x-textarea name="body" id="body" x-model="body" required></x-textarea>
         </div>
         <x-error value="body"></x-error>
 
         <div class="mt-3">
-            <select name="channel_id" class="w-full border border-blue-100" required>
+            <select name="channel_id" class="w-full border border-blue-100" required x-model="channel_id">
                 <option  disabled selected>choose your channel</option>
                 @foreach(\App\Models\Channel::all() as $channel)
                 <option @if(old('channel_id')==$channel->id) selected @endif value="{{$channel->id}}" >{{$channel->name}}</option>

@@ -41,9 +41,7 @@ class LikeController extends Controller
      */
     public function store(Reply $reply)
     {
-        $reply->incrementLikes();
-
-        return redirect()->back();
+        return $reply->incrementLikes();
 
     }
 

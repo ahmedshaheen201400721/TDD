@@ -12,6 +12,7 @@ class Thread extends Model
 {
     use HasFactory,RecordActivity;
     protected $guarded=[];
+    protected $appends=['isSubscribed'];
 
     // create slug for any thread
     protected static function boot()
@@ -27,12 +28,13 @@ class Thread extends Model
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function replies(){
-        return $this->hasMany(Reply::class);
+        return $this->hasMany(Reply::class)->latest();
     }
 
     public function addReply()
     {
-        $this->replies()->create(['body'=>request('body'),'user_id'=>auth()->id()]);
+       $reply= $this->replies()->create(['body'=>request('body'),'user_id'=>auth()->id()]);
+        return $reply;
     }
 
     public function author()
@@ -50,7 +52,20 @@ class Thread extends Model
     }
 
     public function scopeFilter($query,QueryFilter $filter){
-           return  $filter->apply($query);
+        return  $filter->apply($query);
+    }
+    public function subscriptions(){
+        return $this->hasMany(Subscription::class);
+    }
+    public function subscribe($userId=null){
+         $this->subscriptions()->create(['user_id'=>$userId?:auth()->id()]);
+    }
+    public function unsubscribe($userId=null){
+        $this->subscriptions()->where('user_id',$userId?:auth()->id())->delete();
+    }
+    public function getIsSubscribedAttribute(){
+     return  $this->subscriptions()->where('user_id',auth()->id())->exists();
+
     }
 
 }

@@ -9,6 +9,7 @@ use App\support\filters\QueryFilter;
 use App\support\filters\ThreadFilter;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Inertia\Inertia;
 
 class ThreadController extends Controller
 {
@@ -61,11 +62,11 @@ class ThreadController extends Controller
             'channel_id'=>'required|Exists:channels,id',
         ]);
         Thread::create(array_merge($request->all(),['user_id'=>auth()->id()]));
-        return redirect(route('threads.index'));
+        return redirect(route('Threads.index'));
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified resource. return Inertia::render('Profile/Show'
      *
      * @param Channel $channel
      * @param \App\Models\Thread $thread
@@ -76,12 +77,24 @@ class ThreadController extends Controller
 
         if($thread->exists){
             $thread->load('replies');
-            return view('threads.show',['thread'=>$thread,'channel'=>$channel]);
+            $count=$thread->replies_count?:$thread->replies->count();
+//            return $thread;
+            return  Inertia::render('Threads/Show',[
+                'thread'=>$thread,
+                'replies'=>$thread->replies,
+                'time'=>$thread->created_at->diffForHumans(),
+                'author'=>$thread->author,
+                'path'=>$thread->path(),
+                'canUpdataThread'=>auth()->user()->can('update',$thread),
+                'repliesCount'=>$count .' '.\Illuminate\Support\Str::plural('replies',$count)
+            ]);
+//            return view('Threads.show',['thread'=>$thread,'channel'=>$channel]);
 
         }else{
-            $threads=$channel->threads()->withCount('replies')->with('channel:id,slug')->paginate();
-            return view('threads.index',['threads'=>$threads,'channel'=>$channel]);
+            $Threads=$channel->Threads()->withCount('replies')->with('channel:id,slug')->paginate();
+            return view('Threads.index',['Threads'=>$Threads,'channel'=>$channel]);
         }
+
 
     }
 
@@ -118,8 +131,8 @@ class ThreadController extends Controller
     public function destroy(Thread $thread)
     {
         $this->authorize('update',$thread);
-        $thread->replies()->delete();
+        $thread->replies->each->delete();
         $thread->delete();
-        return back();
+        return redirect(route('Threads.index'));
     }
 }

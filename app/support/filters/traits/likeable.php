@@ -14,6 +14,10 @@ trait likeable
     public function incrementLikes(){
         if(!$this->likes()->where("user_id",auth()->id())->exists()){
             $this->likes()->create(['user_id'=>auth()->id()]);
+            return response('liked',200);
+        }else{
+            $this->likes()->where('user_id',auth()->id())->delete();
+            return response('unliked',200);
         }
     }
     public function isLiked(){
@@ -22,4 +26,5 @@ trait likeable
     public function likeCount(){
         return $this->likes->count();
     }
+
 }

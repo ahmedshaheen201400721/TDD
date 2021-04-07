@@ -21,7 +21,7 @@ class ThreadFilterTest extends TestCase
         $channel=Channel::factory()->create();
         $channel_thread=Thread::factory()->create(['channel_id'=>$channel->id]);
         $not_channel_thread=Thread::factory()->create();
-        $response = $this->get("$channel->slug/threads");
+        $response = $this->get("$channel->slug/Threads");
 
         $response->assertSee($channel_thread->body)->assertDontSee($not_channel_thread->body);
     }
@@ -34,7 +34,7 @@ class ThreadFilterTest extends TestCase
         $author=User::factory()->create();
         $author_thread=Thread::factory()->create(['user_id'=>$author->id]);
         $not_author_thread=Thread::factory()->create();
-        $response = $this->get("threads?filter&author=$author->name");
+        $response = $this->get("Threads?filter&author=$author->name");
 
         $response->assertSee($author_thread->body)->assertDontSee($not_author_thread->body);
     }
@@ -50,7 +50,7 @@ class ThreadFilterTest extends TestCase
         $thread1=Thread::factory()->hasReplies(5)->create();
 
 
-        $response = $this->get("threads?filter&popular");
+        $response = $this->get("Threads?filter&popular");
 
         $response->assertSeeInOrder([$thread1->name,$thread2->name,$thread3->name]);
     }

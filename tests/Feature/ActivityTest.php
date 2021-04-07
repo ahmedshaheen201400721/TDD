@@ -30,7 +30,7 @@ class ActivityTest extends TestCase
     /**
      * @test
      */
-    public function when_authUser_make_reply_he_has_activity()
+    public function when_authUser_make_reply_he_has_activity_for_thread_and_Reply()
     {
         $user=User::factory()->create();
         $this->actingAs($user);
@@ -38,6 +38,19 @@ class ActivityTest extends TestCase
        $this->assertCount(2,Activity::all());
 
     }
+
+      /**
+       * @test
+       */
+      public function activity_has_subject()
+      {
+          $user=User::factory()->create();
+          $this->actingAs($user);
+          $thread=\App\Models\Thread::factory()->create(['user_id'=>auth()->id()]);
+          $this->assertEquals($thread->id,Activity::first()->subject->id);
+      }
+
+
 
 
 }
