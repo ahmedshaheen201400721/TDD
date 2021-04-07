@@ -23,7 +23,10 @@
                             </div>
                         </div>
                     </a>
-                    <div>
+                    <div v-if="canUpdataThread">
+                        <delete-button :item="thread" :routeName="'Threads.destroy'"></delete-button>
+                    </div>
+                    <div v-else>
                         <subscribe :isSubscribed="thread.isSubscribed"></subscribe>
                     </div>
                 </div>

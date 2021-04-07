@@ -17,7 +17,7 @@ use Inertia\Inertia;
 //
 ////\Illuminate\Support\Facades\DB::listen(fn($query)=>dump($query->sql));
 //Route::get('/test',fn()=>auth()->user()->feed());
-Route::get('/test',fn()=> Inertia::render('Threads/Show'));
+Route::get('/test',fn()=> dd(auth()->user()->notifications) );
 //
 //
 Route::get('threads',[\App\Http\Controllers\ThreadController::class,'index'])->name('Threads.index');

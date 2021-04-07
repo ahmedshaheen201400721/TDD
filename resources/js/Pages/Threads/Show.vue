@@ -49,7 +49,7 @@
         data(){
             return{
                 form: {
-                    body: 'ahmed',
+                    body: '',
                     thread_id: this.thread.id,
                     user_id: this.$page.props.user.id ,
                 },

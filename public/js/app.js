@@ -4321,6 +4321,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -6652,7 +6655,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       form: {
-        body: 'ahmed',
+        body: '',
         thread_id: this.thread.id,
         user_id: this.$page.props.user.id
       }
@@ -35852,15 +35855,25 @@ var render = function() {
               ]
             ),
             _vm._v(" "),
-            _c(
-              "div",
-              [
-                _c("subscribe", {
-                  attrs: { isSubscribed: _vm.thread.isSubscribed }
-                })
-              ],
-              1
-            )
+            _vm.canUpdataThread
+              ? _c(
+                  "div",
+                  [
+                    _c("delete-button", {
+                      attrs: { item: _vm.thread, routeName: "Threads.destroy" }
+                    })
+                  ],
+                  1
+                )
+              : _c(
+                  "div",
+                  [
+                    _c("subscribe", {
+                      attrs: { isSubscribed: _vm.thread.isSubscribed }
+                    })
+                  ],
+                  1
+                )
           ])
         ]),
         _vm._v(" "),

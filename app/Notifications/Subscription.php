@@ -2,12 +2,14 @@
 
 namespace App\Notifications;
 
+use App\Models\Thread;
+use App\Models\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class Subscription extends Notification
+class Subscription extends Notification implements ShouldQueue
 {
     use Queueable;
 
@@ -16,9 +18,12 @@ class Subscription extends Notification
      *
      * @return void
      */
-    public function __construct()
+    public $thread;
+    public $user;
+    public function __construct(Thread $thread,User $user)
     {
-        //
+        $this->thread=$thread;
+        $this->user=$user;
     }
 
     /**
@@ -29,7 +34,7 @@ class Subscription extends Notification
      */
     public function via($notifiable)
     {
-        return ['mail'];
+        return ['database'];
     }
 
     /**
@@ -55,7 +60,10 @@ class Subscription extends Notification
     public function toArray($notifiable)
     {
         return [
-            //
+            'name'=>$this->user->name,
+            'Thread'=>$this->thread->title,
+            'path'=>$this->thread->path(),
+            'photo'=>$this->user->profile_photo_path,
         ];
     }
 }

@@ -65,7 +65,10 @@ class Thread extends Model
     }
     public function getIsSubscribedAttribute(){
      return  $this->subscriptions()->where('user_id',auth()->id())->exists();
-
+    }
+    public function subscribedUsers(){
+      return $this->belongsToMany(User::class,'subscriptions','thread_id','user_id')
+          ->withTimestamps();
     }
 
 }

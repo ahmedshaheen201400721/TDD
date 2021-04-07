@@ -11,75 +11,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b7618e1-cd85-4885-9fb6-ab9f059ab210" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/Jetstream/form/DeleteButton.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/Jetstream/replies/replies.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/Jetstream/replies/reply.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/Jetstream/subscription/subscribe.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/Jetstream/threads/thread.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Threads/Show.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Threads/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/channels/channels.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/activities/activity.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/activities/created_like.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/activities/created_thread.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/channel-dropdown.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/delete-button.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/flash.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/modal.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/replies/replies.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/replies/reply.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/thread-card.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/forum.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/forum.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a.html" beforeDir="false" afterPath="$PROJECT_DIR$/a.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LikeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LikeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReplyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReplyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ThreadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ThreadController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Activity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Activity.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Like.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Like.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Reply.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Reply.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Subscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Subscription.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Thread.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Thread.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/support/filters/traits/RecordActivity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/support/filters/traits/RecordActivity.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/support/filters/traits/likeable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/support/filters/traits/likeable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/hashing.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/hashing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_20_153149_create_threads_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_20_153149_create_threads_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_20_153159_create_replies_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_20_153159_create_replies_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Notifications/Subscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/Subscription.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/dropdown.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/dropdown.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/input.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/input.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/thread.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/thread.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/threads-button.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/threads-button.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navigation.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profile/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/threads/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/threads/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/threads/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/threads/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Jetstream/threads/thread.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Jetstream/threads/thread.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Threads/Show.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Threads/Show.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ActivityTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ActivityTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/CreateThread_and_ReplyTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CreateThread_and_ReplyTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ProfileTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ProfileTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ReplyTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ReplyTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ThreadFilterTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ThreadFilterTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ThreadsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ThreadsTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,6 +181,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editorconfig.notification" value="null" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -381,6 +323,7 @@
       <workItem from="1617530027863" duration="7371000" />
       <workItem from="1617540395867" duration="22060000" />
       <workItem from="1617625398059" duration="10389000" />
+      <workItem from="1617792844348" duration="2859000" />
     </task>
     <servers />
   </component>
@@ -608,10 +551,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="456" y="205" key="save.file.as.template.dialog/0.27.1366.741@0.27.1366.741" timestamp="1615304687562" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1617644747373">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1617797808924">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1617644747373" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1617797808924" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

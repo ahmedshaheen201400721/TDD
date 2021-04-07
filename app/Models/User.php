@@ -81,4 +81,5 @@ class User extends Authenticatable
     public function feed(){
         return $this->activities()->latest()->with('subject')->get()->groupBy(fn($activity)=>$activity->created_at->format("Y-m-d"));
     }
+
 }
